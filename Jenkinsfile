@@ -2,8 +2,7 @@ pipeline {
 agent any
     stages {
         stage ('Stage -1: clone Git-Repo') {
-        steps {
-            cleanWs()
+            steps {
             echo "Pulling changes from branch main and from repo "
             checkout poll: false,
             scm: [
