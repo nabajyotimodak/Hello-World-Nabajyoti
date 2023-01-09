@@ -2,7 +2,7 @@ pipeline {
 agent any
     stages {
         stage ('Stage -1: clone Git-Repo') {
-            steps {
+        steps {
             echo "Pulling changes from branch main and from repo "
             checkout poll: false,
             scm: [
@@ -16,5 +16,10 @@ agent any
   ]
                 }
             }
+        stage ('Stage-2 Building the Job') {
+        steps {
+            sh 'mvn clean install'
+        }
+        }
         }
 }
