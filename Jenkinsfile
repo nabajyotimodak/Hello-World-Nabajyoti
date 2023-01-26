@@ -18,7 +18,7 @@ agent any
             }
         stage ('Stage-2 Building the Job') {
         steps {
-            sh 'maven clean install'
+            sh 'mvn clean install'
         }
         }
         }
