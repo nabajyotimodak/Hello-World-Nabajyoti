@@ -1,8 +1,8 @@
 pipeline {
 agent any
     tools { 
-      maven 'Maven 3.8.7' 
-      jdk 'jdk11' 
+      maven 'Maven' 
+     
     }
     stages {
         stage ('Stage -1: clone Git-Repo') {
