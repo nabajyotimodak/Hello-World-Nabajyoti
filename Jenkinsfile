@@ -27,6 +27,7 @@ agent any
         }
         stage ('Stage-3 Building the Docker Image') {
         steps {
+            sh 'chmod 777 /var/run/docker.sock'
             sh 'docker build -t apacheimage .'
         }
         }
