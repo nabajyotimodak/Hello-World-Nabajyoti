@@ -25,5 +25,10 @@ agent any
             sh 'mvn clean install'
         }
         }
+        stage ('Stage-3 Building the Docker Image') {
+        steps {
+            sh 'docker build -t apacheimage .'
+        }
+        }
         }
 }
